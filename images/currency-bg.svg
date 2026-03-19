@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Deep navy to teal gradient base -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="40%" style="stop-color:#0d1b3e"/>
+      <stop offset="100%" style="stop-color:#0a2a3a"/>
+    </linearGradient>
+
+    <!-- Gold shimmer gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5c842;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#e8a020;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ffd700;stop-opacity:0.8"/>
+    </linearGradient>
+
+    <!-- Green accent gradient -->
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00c896;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#00e5b0;stop-opacity:0.5"/>
+    </linearGradient>
+
+    <!-- Radial glow for corners -->
+    <radialGradient id="cornerGlow1" cx="0%" cy="0%" r="60%">
+      <stop offset="0%" style="stop-color:#1a4080;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="cornerGlow2" cx="100%" cy="100%" r="60%">
+      <stop offset="0%" style="stop-color:#0d3d30;stop-opacity:0.7"/>
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="cornerGlow3" cx="100%" cy="0%" r="50%">
+      <stop offset="0%" style="stop-color:#2a1060;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="cornerGlow4" cx="0%" cy="100%" r="50%">
+      <stop offset="0%" style="stop-color:#0a2a3a;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#0a0e27;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Center mask to keep middle clear -->
+    <radialGradient id="centerMask" cx="50%" cy="50%" r="28%">
+      <stop offset="0%" style="stop-color:#000;stop-opacity:1"/>
+      <stop offset="60%" style="stop-color:#000;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#000;stop-opacity:0"/>
+    </radialGradient>
+    <mask id="edgeMask">
+      <rect width="1920" height="1080" fill="white"/>
+      <ellipse cx="960" cy="540" rx="380" ry="260" fill="url(#centerMask)"/>
+    </mask>
+
+    <!-- Grid line fade -->
+    <linearGradient id="gridFade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e90ff;stop-opacity:0.4"/>
+      <stop offset="50%" style="stop-color:#1e90ff;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#1e90ff;stop-opacity:0.4"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- ======= BASE BACKGROUND ======= -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)"/>
+
+  <!-- Corner atmosphere glows -->
+  <rect width="1920" height="1080" fill="url(#cornerGlow1)"/>
+  <rect width="1920" height="1080" fill="url(#cornerGlow2)"/>
+  <rect width="1920" height="1080" fill="url(#cornerGlow3)"/>
+  <rect width="1920" height="1080" fill="url(#cornerGlow4)"/>
+
+  <!-- ======= GRID LINES (perspective) ======= -->
+  <g mask="url(#edgeMask)" opacity="0.15">
+    <!-- Horizontal lines -->
+    <line x1="0" y1="108" x2="1920" y2="108" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="216" x2="1920" y2="216" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="324" x2="1920" y2="324" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="432" x2="1920" y2="432" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="540" x2="1920" y2="540" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="648" x2="1920" y2="648" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="756" x2="1920" y2="756" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="864" x2="1920" y2="864" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="0" y1="972" x2="1920" y2="972" stroke="#1e90ff" stroke-width="0.5"/>
+    <!-- Vertical lines -->
+    <line x1="192" y1="0" x2="192" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="384" y1="0" x2="384" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="576" y1="0" x2="576" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="768" y1="0" x2="768" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="960" y1="0" x2="960" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="1152" y1="0" x2="1152" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="1344" y1="0" x2="1344" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="1536" y1="0" x2="1536" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+    <line x1="1728" y1="0" x2="1728" y2="1080" stroke="#1e90ff" stroke-width="0.5"/>
+  </g>
+
+  <!-- ======= CURRENCY SYMBOLS — scattered around edges ======= -->
+  <!-- Top-left cluster -->
+  <text x="60" y="120" font-family="Georgia, serif" font-size="110" fill="#f5c842" opacity="0.18" filter="url(#bigGlow)">$</text>
+  <text x="170" y="80" font-family="Georgia, serif" font-size="60" fill="#00c896" opacity="0.22">€</text>
+  <text x="40" y="220" font-family="Georgia, serif" font-size="70" fill="#7eb8f7" opacity="0.18">£</text>
+  <text x="200" y="200" font-family="Georgia, serif" font-size="45" fill="#f5c842" opacity="0.15">¥</text>
+  <text x="110" y="310" font-family="Georgia, serif" font-size="50" fill="#e8a020" opacity="0.2">₹</text>
+  <text x="280" y="130" font-family="Georgia, serif" font-size="38" fill="#00e5b0" opacity="0.2">₿</text>
+
+  <!-- Top-right cluster -->
+  <text x="1730" y="130" font-family="Georgia, serif" font-size="105" fill="#00c896" opacity="0.18" filter="url(#bigGlow)">€</text>
+  <text x="1840" y="80" font-family="Georgia, serif" font-size="55" fill="#f5c842" opacity="0.2">£</text>
+  <text x="1600" y="90" font-family="Georgia, serif" font-size="65" fill="#7eb8f7" opacity="0.17">¥</text>
+  <text x="1820" y="210" font-family="Georgia, serif" font-size="48" fill="#e8a020" opacity="0.2">₩</text>
+  <text x="1680" y="220" font-family="Georgia, serif" font-size="42" fill="#f5c842" opacity="0.18">₽</text>
+  <text x="1550" y="200" font-family="Georgia, serif" font-size="36" fill="#00c896" opacity="0.2">₺</text>
+
+  <!-- Bottom-left cluster -->
+  <text x="50" y="980" font-family="Georgia, serif" font-size="100" fill="#7eb8f7" opacity="0.18" filter="url(#bigGlow)">£</text>
+  <text x="180" y="1040" font-family="Georgia, serif" font-size="58" fill="#f5c842" opacity="0.2">₹</text>
+  <text x="40" y="870" font-family="Georgia, serif" font-size="62" fill="#00c896" opacity="0.17">¥</text>
+  <text x="230" y="920" font-family="Georgia, serif" font-size="44" fill="#e8a020" opacity="0.2">$</text>
+  <text x="130" y="820" font-family="Georgia, serif" font-size="40" fill="#7eb8f7" opacity="0.18">₿</text>
+  <text x="300" y="1010" font-family="Georgia, serif" font-size="36" fill="#00e5b0" opacity="0.2">€</text>
+
+  <!-- Bottom-right cluster -->
+  <text x="1760" y="990" font-family="Georgia, serif" font-size="105" fill="#e8a020" opacity="0.18" filter="url(#bigGlow)">¥</text>
+  <text x="1860" y="1050" font-family="Georgia, serif" font-size="55" fill="#00c896" opacity="0.2">$</text>
+  <text x="1620" y="1050" font-family="Georgia, serif" font-size="60" fill="#f5c842" opacity="0.17">₹</text>
+  <text x="1840" y="880" font-family="Georgia, serif" font-size="48" fill="#7eb8f7" opacity="0.2">₽</text>
+  <text x="1700" y="870" font-family="Georgia, serif" font-size="42" fill="#00c896" opacity="0.18">₩</text>
+  <text x="1560" y="940" font-family="Georgia, serif" font-size="36" fill="#e8a020" opacity="0.2">₺</text>
+
+  <!-- Left edge mid -->
+  <text x="-10" y="450" font-family="Georgia, serif" font-size="80" fill="#f5c842" opacity="0.15">₿</text>
+  <text x="30" y="580" font-family="Georgia, serif" font-size="55" fill="#00c896" opacity="0.17">€</text>
+  <text x="10" y="700" font-family="Georgia, serif" font-size="50" fill="#7eb8f7" opacity="0.15">$</text>
+
+  <!-- Right edge mid -->
+  <text x="1840" y="430" font-family="Georgia, serif" font-size="80" fill="#00c896" opacity="0.15">₹</text>
+  <text x="1870" y="570" font-family="Georgia, serif" font-size="55" fill="#f5c842" opacity="0.17">£</text>
+  <text x="1845" y="710" font-family="Georgia, serif" font-size="50" fill="#e8a020" opacity="0.15">¥</text>
+
+  <!-- Top edge mid -->
+  <text x="700" y="55" font-family="Georgia, serif" font-size="65" fill="#00c896" opacity="0.16">£</text>
+  <text x="850" y="45" font-family="Georgia, serif" font-size="48" fill="#f5c842" opacity="0.18">€</text>
+  <text x="1050" y="60" font-family="Georgia, serif" font-size="55" fill="#7eb8f7" opacity="0.16">₿</text>
+  <text x="1200" y="50" font-family="Georgia, serif" font-size="46" fill="#e8a020" opacity="0.17">₩</text>
+
+  <!-- Bottom edge mid -->
+  <text x="680" y="1075" font-family="Georgia, serif" font-size="65" fill="#7eb8f7" opacity="0.16">₽</text>
+  <text x="840" y="1070" font-family="Georgia, serif" font-size="48" fill="#00c896" opacity="0.18">$</text>
+  <text x="1060" y="1072" font-family="Georgia, serif" font-size="55" fill="#f5c842" opacity="0.16">€</text>
+  <text x="1210" y="1068" font-family="Georgia, serif" font-size="46" fill="#e8a020" opacity="0.17">₺</text>
+
+  <!-- ======= GLOWING ACCENT LINES (stock chart feel) ======= -->
+  <!-- Left side chart line -->
+  <polyline points="0,400 80,360 140,390 200,330 280,310 350,350 420,300 480,260 520,280" 
+    fill="none" stroke="#00c896" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <polyline points="0,500 60,480 130,510 200,460 280,440 340,470 400,420 460,390 510,410" 
+    fill="none" stroke="#1e90ff" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- Right side chart line -->
+  <polyline points="1920,380 1850,350 1790,370 1720,320 1650,300 1580,340 1510,290 1460,260 1400,280" 
+    fill="none" stroke="#e8a020" stroke-width="2" opacity="0.5" filter="url(#glow)"/>
+  <polyline points="1920,500 1860,480 1800,510 1720,455 1640,440 1560,465 1490,415 1430,395 1390,415" 
+    fill="none" stroke="#f5c842" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+
+  <!-- ======= DECORATIVE COIN CIRCLES — corners ======= -->
+  <!-- Top-left coin -->
+  <circle cx="140" cy="400" r="55" fill="none" stroke="#f5c842" stroke-width="2.5" opacity="0.35" filter="url(#softGlow)"/>
+  <circle cx="140" cy="400" r="44" fill="none" stroke="#f5c842" stroke-width="1" opacity="0.2"/>
+  <text x="125" y="410" font-family="Georgia, serif" font-size="28" fill="#f5c842" opacity="0.45">$</text>
+
+  <!-- Top-right coin -->
+  <circle cx="1780" cy="350" r="60" fill="none" stroke="#00c896" stroke-width="2.5" opacity="0.35" filter="url(#softGlow)"/>
+  <circle cx="1780" cy="350" r="48" fill="none" stroke="#00c896" stroke-width="1" opacity="0.2"/>
+  <text x="1764" y="362" font-family="Georgia, serif" font-size="30" fill="#00c896" opacity="0.45">€</text>
+
+  <!-- Bottom-left coin -->
+  <circle cx="180" cy="720" r="50" fill="none" stroke="#7eb8f7" stroke-width="2.5" opacity="0.35" filter="url(#softGlow)"/>
+  <circle cx="180" cy="720" r="40" fill="none" stroke="#7eb8f7" stroke-width="1" opacity="0.2"/>
+  <text x="166" y="730" font-family="Georgia, serif" font-size="26" fill="#7eb8f7" opacity="0.45">£</text>
+
+  <!-- Bottom-right coin -->
+  <circle cx="1740" cy="730" r="52" fill="none" stroke="#e8a020" stroke-width="2.5" opacity="0.35" filter="url(#softGlow)"/>
+  <circle cx="1740" cy="730" r="42" fill="none" stroke="#e8a020" stroke-width="1" opacity="0.2"/>
+  <text x="1725" y="742" font-family="Georgia, serif" font-size="28" fill="#e8a020" opacity="0.45">¥</text>
+
+  <!-- ======= FLOATING PARTICLES / DOTS ======= -->
+  <g opacity="0.5">
+    <circle cx="320" cy="250" r="2.5" fill="#f5c842"/>
+    <circle cx="400" cy="420" r="2" fill="#00c896"/>
+    <circle cx="150" cy="500" r="3" fill="#7eb8f7"/>
+    <circle cx="480" cy="700" r="2" fill="#e8a020"/>
+    <circle cx="250" cy="800" r="2.5" fill="#f5c842"/>
+    <circle cx="380" cy="880" r="2" fill="#00c896"/>
+
+    <circle cx="1600" cy="230" r="2.5" fill="#00c896"/>
+    <circle cx="1750" cy="470" r="2" fill="#f5c842"/>
+    <circle cx="1850" cy="600" r="3" fill="#7eb8f7"/>
+    <circle cx="1520" cy="750" r="2" fill="#e8a020"/>
+    <circle cx="1670" cy="860" r="2.5" fill="#f5c842"/>
+    <circle cx="1800" cy="950" r="2" fill="#00c896"/>
+
+    <circle cx="700" cy="40" r="2.5" fill="#00c896"/>
+    <circle cx="1100" cy="30" r="2" fill="#f5c842"/>
+    <circle cx="500" cy="1060" r="2.5" fill="#7eb8f7"/>
+    <circle cx="1400" cy="1065" r="2" fill="#e8a020"/>
+
+    <circle cx="60" cy="650" r="2.5" fill="#7eb8f7"/>
+    <circle cx="1880" cy="400" r="2" fill="#00c896"/>
+  </g>
+
+  <!-- ======= ARROW / EXCHANGE ICONS on sides ======= -->
+  <!-- Left exchange arrows -->
+  <g transform="translate(50, 545)" opacity="0.35" filter="url(#glow)">
+    <path d="M0,0 L50,0 L40,-8 M50,0 L40,8" fill="none" stroke="#00c896" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M50,20 L0,20 L10,12 M0,20 L10,28" fill="none" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right exchange arrows -->
+  <g transform="translate(1820, 545)" opacity="0.35" filter="url(#glow)">
+    <path d="M0,0 L50,0 L40,-8 M50,0 L40,8" fill="none" stroke="#f5c842" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M50,20 L0,20 L10,12 M0,20 L10,28" fill="none" stroke="#00c896" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- ======= BOTTOM BANNER GLOW ======= -->
+  <rect x="0" y="1020" width="1920" height="60" fill="url(#greenGrad)" opacity="0.08"/>
+  <rect x="0" y="0" width="1920" height="50" fill="url(#greenGrad)" opacity="0.07"/>
+
+  <!-- ======= SUBTLE VIGNETTE ======= -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
+    <stop offset="0%" style="stop-color:#000;stop-opacity:0"/>
+    <stop offset="100%" style="stop-color:#000;stop-opacity:0.55"/>
+  </radialGradient>
+  <rect width="1920" height="1080" fill="url(#vignette)"/>
+
+</svg>
